@@ -10,19 +10,9 @@ export class TeacherInterfaceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-	   $(document).ready(function() {
-    $('select').material_select();
-  });
-  }
-  myFunction(){
-	alert("schüler");
-	var x=document.getElementById("Tabelle");
-	
-$("#faecher option:selected").text()
-$("#klasse option:selected").text()
- 
-
-
+    $(document).ready(function () {
+      $('select').material_select();
+    });
   }
 
 }
