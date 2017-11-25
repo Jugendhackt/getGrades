@@ -11,9 +11,6 @@
             <div class="col s12 input-field">
               <input id="password" type="password" class="validate col s12" name="password" placeholder="Passwort" [(ngModel)]="password" required>
             </div>
-            <div class="col s12 input-field">
-              <input id="accountType" type="text" class="validate col s12" name="accounttype" placeholder="Accounttyp; entweder student, teacher, admin" [(ngModel)]="accounttype" required>
-            </div>
           </div>
           <div class="center">
             <button type="button" class="btn waves-effect waves-light blue" id="login-submit" (click)="login()" [disabled]="running">Login</button>

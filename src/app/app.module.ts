@@ -7,6 +7,7 @@ import { StudentInterfaceComponent } from './student-interface/student-interface
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from "@angular/forms";
+import { StudentStatisticsComponent } from './student-statistics/student-statistics.component';
 import { TeacherInterfaceComponent } from './teacher-interface/teacher-interface.component';
 const appRoutes: Routes = [
   { path: 'student',
@@ -18,6 +19,9 @@ const appRoutes: Routes = [
   { path: 'login',
     component: LoginComponent
   },
+  { path: 'student/statistics',
+    component: StudentStatisticsComponent
+  },
 ];
 
 @NgModule({
@@ -26,6 +30,7 @@ const appRoutes: Routes = [
     StudentInterfaceComponent,
     NavigationBarComponent,
     LoginComponent,
+    StudentStatisticsComponent,
     TeacherInterfaceComponent
   ],
   imports: [
