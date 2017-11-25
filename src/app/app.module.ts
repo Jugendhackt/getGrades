@@ -9,7 +9,11 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule} from "@angular/forms";
 import { StudentStatisticsComponent } from './student-statistics/student-statistics.component';
 import { TeacherInterfaceComponent } from './teacher-interface/teacher-interface.component';
+import { StartComponent } from './start/start.component';
 const appRoutes: Routes = [
+  { path: 'start',
+    component: StartComponent
+  },
   { path: 'student',
     component: StudentInterfaceComponent
   },
@@ -31,7 +35,8 @@ const appRoutes: Routes = [
     NavigationBarComponent,
     LoginComponent,
     StudentStatisticsComponent,
-    TeacherInterfaceComponent
+    TeacherInterfaceComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
