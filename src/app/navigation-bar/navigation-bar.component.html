@@ -1,10 +1,18 @@
 <nav class="blue-grey darken-3">
   <div class="nav-wrapper">
-    <a class="brand-logo">getGrades();</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <a class="brand-logo" routerLink="start">getGrades();</a>
+      <!--<li><a class="waves-effect waves-light btn">Logout</a></li>-->
+			<ul id="nav-student" class="right hide-on-med-and-down">
+			<li><a routerLink="student/statistics">Statistiken</a></li>
+			<li><a routerLink="student">Noten</a></li>
+			</ul>
+	  <ul id="nav-teacher" class="right hide-on-med-and-down">
+      <li><a routerLink="teacher/statistics">Statistiken</a></li>
+      <li><a routerLink="teacher">Noten</a></li>
+			</ul>
+	  <ul id="nav-admin" class="right hide-on-med-and-down">
       <li><a routerLink="student/statistics">Statistiken</a></li>
       <li><a routerLink="student">Noten</a></li>
-      <!--<li><a class="waves-effect waves-light btn">Logout</a></li>-->
     </ul>
   </div>
 </nav>
