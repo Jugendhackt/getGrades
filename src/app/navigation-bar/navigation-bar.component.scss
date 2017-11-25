@@ -1,0 +1,12 @@
+nav {
+  .nav-wrapper {
+    margin: 0 25px;
+    .brand-logo {
+      font-weight: 300;
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

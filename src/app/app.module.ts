@@ -20,7 +20,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     StudentInterfaceComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
     LoginComponent
   ],
   imports: [

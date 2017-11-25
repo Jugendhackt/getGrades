@@ -3,7 +3,7 @@ declare let $: any
 @Component({
   selector: 'app-student-interface',
   templateUrl: './student-interface.component.html',
-  styleUrls: ['./student-interface.component.css']
+  styleUrls: ['./student-interface.component.scss']
 })
 export class StudentInterfaceComponent implements OnInit {
 
