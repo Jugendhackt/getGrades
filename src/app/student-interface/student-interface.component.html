@@ -1,40 +1,42 @@
-<ul>
-	<li>
-<!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal-Mathe">Mathe</a>
-
-  <!-- Modal Structure -->
-  <div id="modal-Mathe" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Mathenoten</h4>
-      <p>später tabelle</p>
-	  <h5>Bemerkungen</h5>
-	  <label for="vname">Vorname: <input id="vname" name="vname"> </label>
-	  <label for="nname">Nachname: <input id="nname" name="nname"> </label> 
-	  <label for="klasse">Klasse: <input id="klasse" name="klasse"> </label> 
-	  <textarea></textarea>
-	   <input type="submit" value="senden">
-	  
-    </div>
-    <div class="modal-footer">
-     <a class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+<div>
+  <div class="center">
+    <div class="container">
+      <h1 class="thin">Hi!</h1>
+      <div class="text-left">
+        <h5>Deine F&auml;cher:</h5>
+        <div class="collection">
+          <a class="modal-trigger black-text collection-item" href="#modal-subject">Mathe</a>
+          <a class="modal-trigger black-text collection-item" href="#modal-subject">Deutsch</a>
+        </div>
+      </div>
     </div>
   </div>
-	</li>
-	<li><p></p></li>
-    <li>      
-<!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal-deutsch">Deutsch</a>
 
   <!-- Modal Structure -->
-  <div id="modal-deutsch" class="modal modal-fixed-footer">
+  <div id="modal-subject" class="modal modal-fixed-footer">
     <div class="modal-content">
-      <h4>Deutschnoten</h4>
-      <p>pgwhpqouhgpqohpoh</p>
+      <h3 class="thin">Mathe</h3>
+      <table>
+        <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>25.02.2017</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>24.10.2017</td>
+          <td>1</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
     <div class="modal-footer">
-      <a class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+      <a class="modal-action modal-close waves-effect waves-green btn-flat">Schlie&szlig;en</a>
     </div>
   </div>
-    </li>
-</ul>	
+</div>
