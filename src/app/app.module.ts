@@ -9,7 +9,15 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule} from "@angular/forms";
 import { StudentStatisticsComponent } from './student-statistics/student-statistics.component';
 import { TeacherInterfaceComponent } from './teacher-interface/teacher-interface.component';
+import { AdminInterfaceComponent } from './admin-interface/admin-interface.component';
+import { AdminNewUserComponent } from './admin-new-user/admin-new-user.component';
+import {AdminService} from "./admin.service";
 const appRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
   { path: 'student',
     component: StudentInterfaceComponent
   },
@@ -22,6 +30,12 @@ const appRoutes: Routes = [
   { path: 'student/statistics',
     component: StudentStatisticsComponent
   },
+  { path: 'admin',
+    component: AdminInterfaceComponent
+  },
+  { path: 'admin/newUser',
+    component: AdminNewUserComponent
+  },
 ];
 
 @NgModule({
@@ -31,7 +45,9 @@ const appRoutes: Routes = [
     NavigationBarComponent,
     LoginComponent,
     StudentStatisticsComponent,
-    TeacherInterfaceComponent
+    TeacherInterfaceComponent,
+    AdminInterfaceComponent,
+    AdminNewUserComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +56,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  providers: [],
+  providers: [AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
