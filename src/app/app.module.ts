@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
 import { StudentInterfaceComponent } from './student-interface/student-interface.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 const appRoutes: Routes = [
   { path: 'student',
     component: StudentInterfaceComponent
@@ -13,7 +14,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    StudentInterfaceComponent
+    StudentInterfaceComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,
