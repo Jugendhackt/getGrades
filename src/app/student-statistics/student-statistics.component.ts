@@ -69,6 +69,61 @@ export class StudentStatisticsComponent implements OnInit {
             },
           ],
           fill: false,
+        }, {
+          label: "Deutsch",
+          backgroundColor: '#2196f3',
+          borderColor: '#2196f3',
+          data: [
+            {
+              y: '7',
+              x: '1'
+            },
+            {
+              y: '4',
+              x: '2'
+            },
+            {
+              y: '8',
+              x: '3'
+            },
+            {
+              y: '6',
+              x: '4'
+            },
+            {
+              y: '10',
+              x: '5'
+            },
+            {
+              y: '12',
+              x: '6'
+            },
+            {
+              y: '9',
+              x: '7'
+            },
+            {
+              y: '5',
+              x: '8'
+            },
+            {
+              y: '6',
+              x: '9'
+            },
+            {
+              y: '7',
+              x: '10'
+            },
+            {
+              y: '8',
+              x: '11'
+            },
+            {
+              y: '12',
+              x: '12'
+            },
+          ],
+          fill: false,
         }]
       },
       options: {

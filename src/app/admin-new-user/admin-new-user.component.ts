@@ -3,7 +3,7 @@ import {AdminService} from "../admin.service";
 import {Router} from "@angular/router";
 
 declare let $: any;
-declare let CryptoJS: any;
+declare let sha512: any;
 
 @Component({
   selector: 'app-admin-new-user',
@@ -24,7 +24,8 @@ export class AdminNewUserComponent implements OnInit {
   }
   newUser() {
     var group = $('#group').find('option:selected').val();
-    this.adminService.newUser(this.email, "abc", this.name, group).then((res) => {
+    var newPwd = sha512(this.password);
+    this.adminService.newUser(this.email, newPwd, this.name, group).then((res) => {
       this.router.navigate(['/admin']);
     })
   }

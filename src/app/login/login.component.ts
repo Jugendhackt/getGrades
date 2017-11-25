@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {UserService} from "../user.service";
 declare let $: any;
 @Component({
   selector: 'app-login',
@@ -9,8 +10,7 @@ declare let $: any;
 export class LoginComponent implements OnInit {
   private email: String;
   private password: String;
-  private accounttype: any;
-  constructor(private router: Router) {
+  constructor(private router: Router, private userService: UserService) {
   }
 
   ngOnInit() {
@@ -19,7 +19,12 @@ export class LoginComponent implements OnInit {
     });
   }
   login() {
-    //TODO: axios req
+    this.userService.login(this.email, this.password).then((res: any) => {
+      localStorage.setItem('group', res.groupId)
+      this.router.navigate(['students'])
+    }).catch((e) => {
+      console.error(e);
+    })
   }
 
 }

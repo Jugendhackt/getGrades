@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare let $: any
+declare let $: any;
 @Component({
   selector: 'app-teacher-interface',
   templateUrl: './teacher-interface.component.html',

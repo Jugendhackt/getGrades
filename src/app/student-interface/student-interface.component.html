@@ -5,8 +5,9 @@
       <div class="text-left">
         <h5>Deine F&auml;cher:</h5>
         <div class="collection">
-          <a class="modal-trigger black-text collection-item" href="#modal-subject">Mathe</a>
-          <a class="modal-trigger black-text collection-item" href="#modal-subject">Deutsch</a>
+          <a *ngFor="let subject of subjects" class="modal-trigger black-text collection-item" href="#modal-subject">{{subject}}</a>
+          <!--TODO:Fix-->
+          <!--<a class="modal-trigger black-text collection-item" href="#modal-subject">Deutsch</a>-->
         </div>
       </div>
     </div>

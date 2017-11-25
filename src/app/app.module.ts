@@ -13,6 +13,8 @@ import { AdminInterfaceComponent } from './admin-interface/admin-interface.compo
 import { AdminNewUserComponent } from './admin-new-user/admin-new-user.component';
 import {AdminService} from "./admin.service";
 import { StartComponent } from './start/start.component';
+import {UserService} from "./user.service";
+import {StudentService} from "./student.service";
 const appRoutes: Routes = [
   {
     path: '',
@@ -61,7 +63,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  providers: [AdminService],
+  providers: [AdminService, UserService, StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
