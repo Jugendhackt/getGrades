@@ -7,12 +7,16 @@ import { StudentInterfaceComponent } from './student-interface/student-interface
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from "@angular/forms";
+import { StudentStatisticsComponent } from './student-statistics/student-statistics.component';
 const appRoutes: Routes = [
   { path: 'student',
     component: StudentInterfaceComponent
   },
   { path: 'login',
     component: LoginComponent
+  },
+  { path: 'student/statistics',
+    component: StudentStatisticsComponent
   },
 ];
 
@@ -21,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     StudentInterfaceComponent,
     NavigationBarComponent,
-    LoginComponent
+    LoginComponent,
+    StudentStatisticsComponent
   ],
   imports: [
     BrowserModule,
