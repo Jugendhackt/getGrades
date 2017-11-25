@@ -14,5 +14,15 @@ export class TeacherInterfaceComponent implements OnInit {
     $('select').material_select();
   });
   }
+  myFunction(){
+	alert("schüler");
+	var x=document.getElementById("Tabelle");
+	
+$("#faecher option:selected").text()
+$("#klasse option:selected").text()
+ 
+
+
+  }
 
 }
