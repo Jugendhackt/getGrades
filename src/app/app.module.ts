@@ -12,11 +12,15 @@ import { TeacherInterfaceComponent } from './teacher-interface/teacher-interface
 import { AdminInterfaceComponent } from './admin-interface/admin-interface.component';
 import { AdminNewUserComponent } from './admin-new-user/admin-new-user.component';
 import {AdminService} from "./admin.service";
+import { StartComponent } from './start/start.component';
 const appRoutes: Routes = [
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
+  },
+  { path: 'start',
+    component: StartComponent
   },
   { path: 'student',
     component: StudentInterfaceComponent
@@ -47,7 +51,8 @@ const appRoutes: Routes = [
     StudentStatisticsComponent,
     TeacherInterfaceComponent,
     AdminInterfaceComponent,
-    AdminNewUserComponent
+    AdminNewUserComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
