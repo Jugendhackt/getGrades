@@ -6,7 +6,7 @@
           <span class="card-title">Login</span>
           <div class="row">
             <div class="col s12 input-field">
-              <input type="email" class="validate" id="email" name="email" placeholder="Email" required autofocus>
+              <input type="email" class="validate" id="email" name="email" placeholder="Email" [(ngModel)]="email" required autofocus>
             </div>
             <div class="col s12 input-field">
               <input id="password" type="password" class="validate col s12" name="password" placeholder="Passwort" [(ngModel)]="password" required>

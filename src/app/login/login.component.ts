@@ -23,9 +23,14 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this.userService.login(this.email, this.password).then((res: any) => {
-      localStorage.setItem('group', res.groupId);
+      localStorage.setItem('group', res.data.groupId);
       localStorage.setItem('isAuthenticated', "true");
-      this.router.navigate(['students'])
+      if(res.data.groupId === '0') {
+        this.router.navigate(['admin'])
+      } else {
+        this.router.navigate(['student'])
+      }
+
     }).catch((e) => {
       console.error(e);
     })

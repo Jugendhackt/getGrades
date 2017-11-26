@@ -14,5 +14,14 @@ export class StudentService {
       })
     })
   }
+  public statistics() {
+    return new Promise((resolve, reject) => {
+      axios.get(environment.apiServer + '/getgrades?studentId=1').then((response) => {
+        resolve(response);
+      }).catch((e) => {
+        reject(e);
+      })
+    })
+  }
 
 }

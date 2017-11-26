@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
 nav {
   .nav-wrapper {
     margin: 0 25px;
     .brand-logo {
-      font-weight: 300;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 400;
       @media only screen and (max-width: 991px) {
         width: 100%;
         text-align: center;

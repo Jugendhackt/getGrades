@@ -8,12 +8,11 @@ declare let sha512: any;
 export class UserService {
   constructor() { }
   public login(email: String, password: String) {
-    let hashedpwd = sha512(password);
     return new Promise((resolve, reject) => {
       axios.get(environment.apiServer + '/login', {
         params: {
           username: email,
-          password: hashedpwd,
+          password: password,
         }
       }).then((response) => {
         resolve(response)

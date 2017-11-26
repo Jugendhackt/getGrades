@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StudentService} from "../student.service";
 declare let $: any;
 declare let Chart: any;
 @Component({
@@ -8,7 +9,7 @@ declare let Chart: any;
 })
 export class StudentStatisticsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit() {
     var config = {
@@ -16,8 +17,8 @@ export class StudentStatisticsComponent implements OnInit {
       data: {
         datasets: [{
           label: "Mathe",
-          backgroundColor: '#000',
-          borderColor: '#000',
+          backgroundColor: '#b71c1c',
+          borderColor: '#b71c1c',
           data: [
             {
               y: '1.5',
@@ -71,8 +72,8 @@ export class StudentStatisticsComponent implements OnInit {
           fill: false,
         }, {
           label: "Deutsch",
-          backgroundColor: '#2196f3',
-          borderColor: '#2196f3',
+          backgroundColor: '#fbc02d',
+          borderColor: '#fbc02d',
           data: [
             {
               y: '7',
@@ -99,7 +100,7 @@ export class StudentStatisticsComponent implements OnInit {
               x: '6'
             },
             {
-              y: '9',
+              y: '15',
               x: '7'
             },
             {
@@ -120,6 +121,61 @@ export class StudentStatisticsComponent implements OnInit {
             },
             {
               y: '12',
+              x: '12'
+            },
+          ],
+          fill: false,
+        }, {
+          label: "Englisch",
+          backgroundColor: '#0d47a1',
+          borderColor: '#0d47a1',
+          data: [
+            {
+              y: '7',
+              x: '1'
+            },
+            {
+              y: '2',
+              x: '2'
+            },
+            {
+              y: '9',
+              x: '3'
+            },
+            {
+              y: '10',
+              x: '4'
+            },
+            {
+              y: '4',
+              x: '5'
+            },
+            {
+              y: '13',
+              x: '6'
+            },
+            {
+              y: '0',
+              x: '7'
+            },
+            {
+              y: '14',
+              x: '8'
+            },
+            {
+              y: '15',
+              x: '9'
+            },
+            {
+              y: '6',
+              x: '10'
+            },
+            {
+              y: '9',
+              x: '11'
+            },
+            {
+              y: '8',
               x: '12'
             },
           ],
