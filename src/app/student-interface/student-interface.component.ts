@@ -9,8 +9,9 @@ declare let $: any;
   styleUrls: ['./student-interface.component.scss']
 })
 export class StudentInterfaceComponent implements OnInit {
-  subjects = this.req_subject();
-  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  subjects = this.studentService.subjects().then((res: any) => {
+    return res.data.subjects;
+  });
   constructor(private studentService: StudentService) { }
 
   ngOnInit() {
@@ -20,11 +21,4 @@ export class StudentInterfaceComponent implements OnInit {
     $('.modal').modal();
   });
   }
-  public req_subject(): any {
-    this.studentService.subjects().then((res: any) => {
-      console.log(res.data.subjects);
-      return res.data.subjects;
-    })
-  }
-
 }

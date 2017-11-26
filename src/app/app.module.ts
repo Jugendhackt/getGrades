@@ -15,32 +15,41 @@ import {AdminService} from "./admin.service";
 import { StartComponent } from './start/start.component';
 import {UserService} from "./user.service";
 import {StudentService} from "./student.service";
+import {IsAuthenticated} from "./is-authenticated";
+
 const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-  },
-  { path: 'start',
-    component: StartComponent
-  },
-  { path: 'student',
-    component: StudentInterfaceComponent
-  },
-  { path: 'teacher',
-    component: TeacherInterfaceComponent
-  },
   { path: 'login',
     component: LoginComponent
   },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+    canActivate: [IsAuthenticated]
+  },
+  { path: 'start',
+    component: StartComponent,
+    canActivate: [IsAuthenticated]
+  },
+  { path: 'student',
+    component: StudentInterfaceComponent,
+    canActivate: [IsAuthenticated]
+  },
+  { path: 'teacher',
+    component: TeacherInterfaceComponent,
+    canActivate: [IsAuthenticated]
+  },
   { path: 'student/statistics',
-    component: StudentStatisticsComponent
+    component: StudentStatisticsComponent,
+    canActivate: [IsAuthenticated]
   },
   { path: 'admin',
-    component: AdminInterfaceComponent
+    component: AdminInterfaceComponent,
+    canActivate: [IsAuthenticated]
   },
   { path: 'admin/newUser',
-    component: AdminNewUserComponent
+    component: AdminNewUserComponent,
+    canActivate: [IsAuthenticated]
   },
 ];
 
@@ -63,7 +72,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  providers: [AdminService, UserService, StudentService],
+  providers: [AdminService, UserService, StudentService, IsAuthenticated],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

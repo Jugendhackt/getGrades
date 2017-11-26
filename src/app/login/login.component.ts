@@ -14,13 +14,17 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(localStorage.getItem('isAuthenticated') === 'true') {
+      this.router.navigate(['start'])
+    }
     $(document).ready(function() {
       $('select').material_select();
     });
   }
   login() {
     this.userService.login(this.email, this.password).then((res: any) => {
-      localStorage.setItem('group', res.groupId)
+      localStorage.setItem('group', res.groupId);
+      localStorage.setItem('isAuthenticated', "true");
       this.router.navigate(['students'])
     }).catch((e) => {
       console.error(e);
